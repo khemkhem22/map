@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windy & TMD</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- เพิ่มฟอนต์ภาษาไทย Sarabun -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">สภาพอากาศจังหวัดเชียงราย</div>
+            <nav>
+                <ul>
+                    <li><a href="./map.html">หน้าหลัก</a></li>
+                    <li><a href="./region.php">พยากรณ์อากาศระดับภูมิภาค</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="info-panel">
+            <h2>แผนที่สภาพอากาศจังหวัดเชียงรายและประเทศไทย</h2>
+            <p>ติดตามข้อมูลสภาพอากาศทั่วประเทศไทยและทั่วโลกได้แบบเรียลไทม์ ดูข้อมูลลม ฝน อุณหภูมิ และการพยากรณ์อากาศล่วงหน้า</p>
+        </div>
+        
+        <div class="main-content">
+            <!-- พยากรณ์อากาศจากกรมอุตุนิยมวิทยา อยู่ข้างบนแผนที่ -->
+            <div>
+                <div class="section-title">พยากรณ์อากาศจากกรมอุตุนิยมวิทยา</div>
+                <div class="forecast-container">
+                    <iframe title="tmd" class="forecast-iframe" src="https://www.tmd.go.th/weatherForecast7DaysWidget?province=เชียงราย" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            
+            <div>
+                <div class="section-title">แผนที่สภาพอากาศเรียลไทม์จาก Windy</div>
+                <div id="map" class="map-container">
+                    <iframe title="windy" src="https://embed.windy.com/embed2.html?lat=19.911&lon=99.826&detailLat=19.911&detailLon=99.826&width=650&height=450&zoom=10&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">แผนที่เรดาร์ TMD</div>
+                <div class="radar-container">
+                    <iframe title="radar" src="http://www.sattmet.tmd.go.th/satmet/asian/loop/enh/gifenh_asian.html" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">แผนที่การเปรียบเทียบเรดาร์ TMD</div>
+                <div class="iframe-container">
+                    <iframe title="radar-comparison" src="http://www.sattmet.tmd.go.th/satmet/satellte_radar/sat_radarnew2.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
